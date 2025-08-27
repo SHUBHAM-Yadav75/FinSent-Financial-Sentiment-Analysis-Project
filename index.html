@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Sentiment Emotion Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💹 Financial Sentiment Analyzer</h1>
+            <p>Analyze emotions and sentiment in financial text using advanced NLP</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="textInput">Enter Financial Text for Analysis:</label>
+                    <textarea 
+                        id="textInput" 
+                        class="text-input" 
+                        placeholder="Enter financial news, earnings reports, analyst comments, or market updates here..."
+                    ></textarea>
+                </div>
+                
+                <button id="analyzeBtn" class="analyze-btn">
+                    🔍 Analyze Sentiment
+                </button>
+                
+                <div class="sample-texts">
+                    <div class="sample-title">Try these sample texts:</div>
+                    <div class="sample-buttons">
+                        <button class="sample-btn" data-text="The company reported record-breaking quarterly earnings, exceeding analyst expectations by 15%. Stock price surged in after-hours trading.">Positive Earnings</button>
+                        <button class="sample-btn" data-text="Market volatility continues as inflation concerns weigh on investor sentiment. Major indices declined for the third consecutive session.">Market Decline</button>
+                        <button class="sample-btn" data-text="The Federal Reserve announced no changes to interest rates, maintaining current monetary policy stance.">Neutral Fed News</button>
+                        <button class="sample-btn" data-text="Cryptocurrency markets experienced severe turbulence following regulatory concerns, with Bitcoin dropping 12% overnight.">Crypto Volatility</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="resultsSection" class="results-section results-hidden">
+                <h2 class="results-title">📊 Analysis Results</h2>
+                
+                <div class="sentiment-overview">
+                    <div class="sentiment-card positive">
+                        <div class="sentiment-label">Positive</div>
+                        <div id="positiveScore" class="sentiment-score">0%</div>
+                        <div>Confidence</div>
+                    </div>
+                    <div class="sentiment-card neutral">
+                        <div class="sentiment-label">Neutral</div>
+                        <div id="neutralScore" class="sentiment-score">0%</div>
+                        <div>Confidence</div>
+                    </div>
+                    <div class="sentiment-card negative">
+                        <div class="sentiment-label">Negative</div>
+                        <div id="negativeScore" class="sentiment-score">0%</div>
+                        <div>Confidence</div>
+                    </div>
+                </div>
+                
+                <div class="emotion-analysis">
+                    <h3 class="emotion-title">🎭 Detailed Emotion Analysis</h3>
+                    <div id="emotionBars" class="emotion-bars">
+                        <!-- Emotion bars will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
